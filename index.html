@@ -1,0 +1,199 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Wąsosz in 1906</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  /* Layout: single reading column, dated events as a ledger, one table for the timeline */
+  :root {
+    --bg: #f6f7f9;
+    --surface: #ffffff;
+    --fg: #1d2330;
+    --muted: #5b6475;
+    --rule: #d9dde5;
+    --accent: #a3262f;
+    --accent-soft: #f6e4e5;
+    --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+    --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12151c;
+      --surface: #1a1e28;
+      --fg: #e6e9f0;
+      --muted: #a0a9ba;
+      --rule: #2d3342;
+      --accent: #e0757c;
+      --accent-soft: #2e1d21;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12151c;
+    --surface: #1a1e28;
+    --fg: #e6e9f0;
+    --muted: #a0a9ba;
+    --rule: #2d3342;
+    --accent: #e0757c;
+    --accent-soft: #2e1d21;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-inline: 16px;
+    padding-block: 40px 64px;
+  }
+  main { max-width: 42rem; margin-inline: auto; }
+
+  header { padding-bottom: 28px; border-bottom: 2px solid var(--fg); margin-bottom: 8px; }
+  .kicker {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.1;
+    margin: 0 0 14px; text-wrap: balance;
+  }
+  .lede { font-size: 1.0625rem; color: var(--fg); margin: 0 0 14px; }
+  .note { font-size: 0.9375rem; color: var(--muted); margin: 0; }
+
+  section { padding-top: 36px; }
+  h2 {
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 1.5rem; line-height: 1.25; margin: 0 0 14px; text-wrap: balance;
+  }
+  h3 {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--muted); margin: 24px 0 4px;
+  }
+  p { margin: 0 0 14px; }
+
+  dl.facts { margin: 0 0 16px; display: grid; gap: 0; }
+  dl.facts > div {
+    display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 16px;
+    padding-block: 12px; border-top: 1px solid var(--rule);
+  }
+  dl.facts > div:last-child { border-bottom: 1px solid var(--rule); }
+  dt { font-weight: 600; margin: 0; }
+  dd { margin: 0; min-width: 0; }
+
+  ol.events { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 0; }
+  ol.events > li {
+    display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 16px;
+    padding-block: 14px; border-top: 1px solid var(--rule);
+  }
+  ol.events > li:last-child { border-bottom: 1px solid var(--rule); }
+  .when { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent); }
+  .what { min-width: 0; }
+  .what strong { display: block; margin-bottom: 2px; }
+
+  .caveat {
+    background: var(--accent-soft); border-radius: 4px;
+    padding: 12px 16px; margin: 4px 0 0; font-size: 0.9375rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 6px;
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.9375rem; }
+  th, td { text-align: left; padding: 11px 16px; vertical-align: top; }
+  thead th {
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid var(--rule);
+  }
+  tbody tr + tr td { border-top: 1px solid var(--rule); }
+  td:first-child { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+
+  @media (max-width: 30rem) {
+    dl.facts > div, ol.events > li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  }
+</style>
+
+<main>
+  <header>
+    <p class="kicker">Family history background</p>
+    <h1>Wąsosz in 1906</h1>
+    <p class="lede">In 1906, Wąsosz (near Łomża, in northeastern Poland) was under Russian imperial rule, during the upheaval known as the Revolution of 1905–1907. For a Polish family living there, that meant life under a government that restricted Polish national expression, with growing demands for independence or autonomy and rising tension between the authorities and the local population.</p>
+    <p class="note">The useful question for research into a family from around Wąsosz is what these national events meant for ordinary people in a small town and its surrounding villages.</p>
+  </header>
+
+  <section>
+    <h2>Who ruled Wąsosz in 1906?</h2>
+    <p>Wąsosz lay in the Congress Kingdom of Poland, created after Napoleon's defeat and increasingly subordinated to the Russian Empire through the nineteenth century. It belonged to the Łomża administrative region.</p>
+    <dl class="facts">
+      <div><dt>Sovereign power</dt><dd>Tsar Nicholas II ruled the Russian Empire.</dd></div>
+      <div><dt>Local administration</dt><dd>Russian imperial officials and institutions held political authority.</dd></div>
+      <div><dt>National situation</dt><dd>Poland did not exist as an independent state. Russia, Prussia and Austria had partitioned its territories in the late eighteenth century.</dd></div>
+      <div><dt>Local population</dt><dd>The surrounding countryside was mostly Polish-speaking and Catholic. Jewish communities were an important part of the region's towns and local economy.</dd></div>
+    </dl>
+    <p>Ancestors living here were not in the independent Poland familiar from later family history. They lived in a territory governed by an empire that had suppressed earlier Polish uprisings.</p>
+  </section>
+
+  <section>
+    <h2>The Revolution of 1905–1907</h2>
+    <p>The most important immediate political event was the revolution that swept the Russian Empire and its Polish territories. These were the main events affecting the region.</p>
+    <ol class="events">
+      <li>
+        <span class="when">1904–1905</span>
+        <div class="what"><strong>War with Japan</strong>Russia's military defeats weakened confidence in the tsarist government and contributed to widespread unrest.</div>
+      </li>
+      <li>
+        <span class="when">February 1905</span>
+        <div class="what"><strong>School protests in Łomża</strong>Students demanded changes to the Russian-controlled education system, including greater access and the right to Polish-language education. The movement spread to girls' schools as well as boys' schools.</div>
+      </li>
+      <li>
+        <span class="when">Late 1905</span>
+        <div class="what"><strong>A brief opening, then repression</strong>Strikes and demonstrations spread through the Polish territories. The tsar promised civil liberties and a national assembly, but the authorities imposed martial law and arrested activists.</div>
+      </li>
+      <li>
+        <span class="when">1906</span>
+        <div class="what"><strong>Continued unrest</strong>Political arrests and underground organizing continued. In the first months of the year, Jewish socialist activists associated with the Bund were arrested in Łomża.</div>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What this meant for ordinary families</h2>
+    <p>For a farming or working-class family, political events mattered less as arguments about independence than through their effect on daily life.</p>
+    <dl class="facts">
+      <div><dt>Religion and language</dt><dd>Catholic parish life was a central institution for Polish-speaking families. Russian rule made language and national identity political issues, especially in education and administration.</dd></div>
+      <div><dt>Land and livelihood</dt><dd>Most rural families depended on agriculture, farm labor or small trades. The distribution of land and the relations between peasants and landowners were major social issues.</dd></div>
+      <div><dt>Military service</dt><dd>The Russian imperial state could conscript eligible men into its army, separating a young man from his family for years.</dd></div>
+      <div><dt>Political risk</dt><dd>Revolutionary activity could bring surveillance, arrest or punishment. Many ordinary people avoided politics altogether, even when they sympathized with Polish national aspirations.</dd></div>
+    </dl>
+    <p class="caveat">These are regional and imperial circumstances. They are not evidence that any particular family in Wąsosz took part in political activity.</p>
+  </section>
+
+  <section>
+    <h2>The Jewish community</h2>
+    <p>Wąsosz and nearby Łomża had a long-standing Jewish presence. In Łomża, Jewish residents took part in political life through movements that included the General Jewish Labour Bund, which organized Jewish workers and advocated socialist and cultural rights.</p>
+    <p>The Bund's activity, and the arrests of its members in Łomża in 1905–1906, show that the upheaval involved more than Polish nationalists and Russian authorities. Jewish socialists and other groups with different political goals were part of it too.</p>
+  </section>
+
+  <section>
+    <h2>What happened next</h2>
+    <p>The revolution was gradually suppressed by 1907. Russian rule continued until the First World War transformed the region. Poland regained independence in 1918, and Wąsosz became part of the restored Polish state.</p>
+    <h3>Timeline</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Year</th><th scope="col">Significance</th></tr></thead>
+        <tbody>
+          <tr><td>1905</td><td>Revolution, strikes and demands for Polish-language education</td></tr>
+          <tr><td>1906</td><td>Political repression continues; the revolutionary movement remains active</td></tr>
+          <tr><td>1907</td><td>The revolution is largely suppressed</td></tr>
+          <tr><td>1914–1918</td><td>World War I brings major military and political upheaval</td></tr>
+          <tr><td>1918</td><td>Poland regains independence</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+</body></html>
